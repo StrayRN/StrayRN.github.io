@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Please Set Your Site Title
+title: 请输入文本
 subtitle: ''
 description: ''
 keywords:
@@ -99,3 +99,9 @@ deploy:
   type: git
   repo: git@github.com:strayrn/strayrn.github.io.git
   branch: main
+
+search:
+  path: search.xml
+  field: post
+  content: true
+  format: html
