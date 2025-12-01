@@ -6,7 +6,7 @@ updated: 2025-12-01 20:23:00
 tags: 
   - 日常
 categories: 日常记录
-cover:   # (可选) 首页显示的封面图
+cover:   /images/img_2025-12-01-23-40-49.png
 description: 不知道该写什么，也不知道先学什么
 ---
 
