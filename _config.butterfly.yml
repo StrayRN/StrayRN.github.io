@@ -57,7 +57,7 @@ favicon: /img/favicon.png
 
 avatar:
   img: https://avatars.githubusercontent.com/u/54041027?v=4
-  effect: true
+  effect: false
 
 # Disable all banner images
 disable_top_img: false
@@ -66,7 +66,7 @@ disable_top_img: false
 default_top_img:
 
 # The banner image of index page
-index_img: /images/index.png
+index_img: /images/index.jpeg
 
 # The banner image of archive page
 archive_img:
@@ -92,7 +92,7 @@ footer_img: false
 
 # Website Background
 # Can set it to color or image url
-background:
+background: url("/images/bg2.png")
 
 cover:
   # Disable the cover or not
@@ -755,15 +755,16 @@ site_verification:
 # Theme color for customize
 # Notice: color value must in double quotes like "#000" or may cause error!
 
-# theme_color:
-#   enable: true
-#   main: "#49B1F5"
-#   paginator: "#00c4b6"
-#   button_hover: "#FF7242"
-#   text_selection: "#00c4b6"
-#   link_color: "#99a9bf"
-#   meta_color: "#858585"
-#   hr_color: "#A4D8FA"
+theme_color:
+  enable: true
+  main: "#FFB7C5"        
+  paginator: "#FFB7C5"   
+  button_hover: "#FF8FAB" 
+  text_selection: "#FFB7C5" 
+  link_color: "#99a9bf"  
+  meta_color: "#858585"
+  hr_color: "#FFB7C5"    
+  # ... 其他保持默认或者删掉
 #   code_foreground: "#F47466"
 #   code_background: "rgba(27, 31, 35, .05)"
 #   toc_color: "#00c4b6"
@@ -1054,6 +1055,7 @@ css_prefix: true
 inject:
   head:
     # - <link rel="stylesheet" href="/xxx.css">
+    - <link rel="stylesheet" href="/css/custom.css">
   bottom:
     # - <script src="xxxx"></script>
 

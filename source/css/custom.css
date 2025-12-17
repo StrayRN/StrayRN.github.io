@@ -1,0 +1,132 @@
+/* =========================================================
+   1. 全局背景图片 (无需改动)
+   ========================================================= */
+body {
+    background-image: url('/images/bg2.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* =========================================================
+   2. 自定义字体 (无需改动)
+   ========================================================= */
+@font-face {
+    font-family: 'MyTitleFont';
+    src: url('/fonts/custom.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#site-title,
+#site-subtitle,
+.site-name,
+#site-name {
+    font-family: 'MyTitleFont', sans-serif !important;
+    font-weight: normal !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    text-shadow: none !important;
+}
+
+/* =========================================================
+   3. 全站卡片玻璃效果 (Glassmorphism) - 最终正确版
+   ========================================================= */
+
+/* --- 核心：定义所有需要玻璃效果的容器 --- */
+#recent-posts .recent-post-item,
+/* <<< 注意！这里是关键修改！去掉了大于号 > */
+.card-widget,
+#post,
+#page,
+#archive,
+#tag,
+#category,
+.layout>div:first-child:not(.recent-posts),
+#pagination .page-number,
+#pagination .current {
+    background: rgba(255, 255, 255, 0.45) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* --- 必杀技：移除文章页内部背景 --- */
+/* 首页问题已在上面解决，这里只保留文章页的 */
+#post .post-content,
+#page .post-content,
+#post article,
+#page article {
+    background: transparent !important;
+}
+
+
+/* --- 针对文章内代码块的特殊处理 (这部分保持不变) --- */
+#post figure.highlight,
+#post .highlight-wrap {
+    background: rgba(255, 255, 255, 0.55) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* =========================================================
+   4. 页脚 (Footer) 的特殊处理 (这部分保持不变)
+   ========================================================= */
+#footer {
+    background: rgba(255, 255, 255, 0.3) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#footer-wrap,
+#footer-wrap a {
+    color: #333 !important;
+}
+
+/* =========================================================
+   5. 夜间模式下的玻璃效果 (已同步修复)
+   ========================================================= */
+[data-theme="dark"] #recent-posts .recent-post-item,
+[data-theme="dark"] .card-widget,
+[data-theme="dark"] #post,
+[data-theme="dark"] #page,
+[data-theme="dark"] #archive,
+[data-theme="dark"] #tag,
+[data-theme="dark"] #category,
+[data-theme="dark"] .layout>div:first-child:not(.recent-posts),
+[data-theme="dark"] #pagination .page-number,
+[data-theme="dark"] #pagination .current {
+    background: rgba(30, 30, 30, 0.5) !important;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* 夜间模式下，同样移除内部容器的背景 */
+[data-theme="dark"] #recent-posts .recent-post-info {
+    background: transparent !important;
+}
+
+/* 解决文章页面不透明【新增的关键代码】*/
+[data-theme="dark"] #post .post-content {
+    background: transparent !important;
+}
+
+[data-theme="dark"] #post figure.highlight,
+[data-theme="dark"] #post .highlight-wrap {
+    background: rgba(0, 0, 0, 0.3) !important;
+}
+
+[data-theme="dark"] #footer {
+    background: rgba(30, 30, 30, 0.4) !important;
+    border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] #footer-wrap,
+[data-theme="dark"] #footer-wrap a {
+    color: #c9c9c9 !important;
+}
