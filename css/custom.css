@@ -1,12 +1,31 @@
-/* =========================================================
-   1. 全局背景图片 (无需改动)
-   ========================================================= */
+/* ==================================
+   响应式背景图 (PC vs Mobile)
+   ================================== */
+
+/* 1. 默认设置：给所有设备一个基础样式 */
 body {
-    background-image: url('/images/bg2.png');
+    /* 这是 PC 端的背景图 */
+    background-image: url("/images/bg-pc1.png");
+
+    /* 让背景图固定，滚动时不移动，更有高级感 */
     background-attachment: fixed;
-    background-size: cover;
+
+    /* 背景图不重复 */
     background-repeat: no-repeat;
+
+    /* 背景图居中显示 */
     background-position: center;
+
+    /* 背景图尽可能覆盖整个屏幕 */
+    background-size: cover;
+}
+
+/* 2. 媒体查询：当屏幕宽度小于等于 768px 时 (大部分手机) */
+@media (max-width: 768px) {
+    body {
+        /* 切换成手机端的背景图 */
+        background-image: url("/images/bg-mb1.jpg");
+    }
 }
 
 /* =========================================================
